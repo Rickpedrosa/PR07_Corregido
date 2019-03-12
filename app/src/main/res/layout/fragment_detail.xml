@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imgAvatar"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:contentDescription="@string/img_avatar_descr"
+            android:scaleType="fitXY"
+            app:layout_constraintDimensionRatio="16:9"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/lblAvatar"
+            android:layout_width="@dimen/main_label_width"
+            android:layout_height="@dimen/main_label_height"
+            android:layout_marginEnd="@dimen/general_activity_margin"
+            android:layout_marginBottom="@dimen/general_activity_margin"
+            android:background="@android:color/darker_gray"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/imgAvatar"
+            app:layout_constraintEnd_toEndOf="@+id/imgAvatar" />
+
+        <include
+            android:id="@+id/layout_profile"
+            layout="@layout/plantilla_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgAvatar" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

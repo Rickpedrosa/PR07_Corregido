@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="general_activity_margin">8dp</dimen>
+    <dimen name="general_button_min_wdith">20dp</dimen>
+    <dimen name="main_label_width">75dp</dimen>
+    <dimen name="main_label_height">33dp</dimen>
+    <dimen name="avatar_margin_label">8dp</dimen>
+    <dimen name="avatar_width_label">44dp</dimen>
+    <dimen name="avatar_height_label">33dp</dimen>
+    <dimen name="dims_guideline3">170dp</dimen>
+    <dimen name="dimens_guideline4">340dp</dimen>
+    <dimen name="dimens_guideline5">192dp</dimen>
+    <dimen name="dimens_glHorz">155dp</dimen>
+    <dimen name="dimens_glVertLeft">199dp</dimen>
+    <dimen name="dimens_glVertRight">405dp</dimen>
+    <dimen name="dimens_main_gd">150dp</dimen>
+    <dimen name="main_margin">8dp</dimen>
+    <dimen name="dimens_margpadd">8dp</dimen>
+    <dimen name="rv_btn_height">38dp</dimen>
+    <dimen name="layoutMargin">10dp</dimen>
+    <dimen name="width_img_item">77dp</dimen>
+    <dimen name="heigh_img_item">72dp</dimen>
+    <dimen name="rv_paddbot">32dp</dimen>
+    <dimen name="rv_land_paddbot">18dp</dimen>
+    <item name="selected_image_alpha" format="float" type="dimen">0.5</item>
+    <item name="default_image_alpha" format="float" type="dimen">1</item>
+</resources>

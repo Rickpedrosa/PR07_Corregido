@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimens_margpadd"
+        android:padding="@dimen/dimens_margpadd"
+        android:layout_margin="@dimen/layoutMargin"
+        card_view:cardCornerRadius="5dp"
+        card_view:cardElevation="@dimen/dimens_margpadd"
+        card_view:cardPreventCornerOverlap="false"
+        card_view:cardUseCompatPadding="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clRoot"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dimens_margpadd">
+
+            <TextView
+                android:id="@+id/lbl_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="@dimen/dimens_margpadd"
+                android:textColor="@color/colorBlack"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/lbl_usermail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="@dimen/dimens_margpadd"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lbl_username" />
+
+            <TextView
+                android:id="@+id/lbl_usertlf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="@dimen/dimens_margpadd"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lbl_usermail" />
+
+            <Button
+                android:id="@+id/btn_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/rv_btn_height"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="@dimen/dimens_margpadd"
+                android:background="@android:color/transparent"
+                android:text="@string/btn_edit"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lbl_usertlf" />
+
+            <Button
+                android:id="@+id/btn_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/rv_btn_height"
+                android:layout_marginStart="@dimen/dimens_margpadd"
+                android:background="@android:color/transparent"
+                android:text="@string/btn_delete"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/btn_edit" />
+
+            <ImageView
+                android:id="@+id/image_user"
+                android:layout_width="@dimen/width_img_item"
+                android:layout_height="@dimen/heigh_img_item"
+                android:layout_marginTop="@dimen/dimens_margpadd"
+                android:layout_marginEnd="@dimen/layoutMargin"
+                android:contentDescription="@string/img_user_descrp"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>

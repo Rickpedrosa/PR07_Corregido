@@ -1,0 +1,36 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Users</string>
+    <string name="avatar_label" tools:ignore="ExtraTranslation">Select Avatar</string>
+    <string name="main_invalid_data" tools:ignore="ExtraTranslation">Invalid data</string>
+    <string name="main_save">Save</string>
+    <string name="main_saved_succesfully">User saved successfully</string>
+    <string name="main_error_saving">Error saving user</string>
+    <string name="avatar_select">Select</string>
+    <string name="main_lblName">name</string>
+    <string name="main_txtName">(name)</string>
+    <string name="main_lblEmail">email</string>
+    <string name="main_txtEmail">(email)</string>
+    <string name="main_lblPhonenumber">phone</string>
+    <string name="main_txtPhonenumber">(phone)</string>
+    <string name="main_lblAddress">Address</string>
+    <string name="main_txtAddress">(address)</string>
+    <string name="main_lblWeb">web</string>
+    <string name="main_txtWeb">(web)</string>
+    <string name="main_imgWeb">image for web</string>
+    <string name="main_imgAddress">image for address</string>
+    <string name="main_imgPhonenumber">image for phone</string>
+    <string name="main_imgEmail">image for email</string>
+    <string name="img_avatar_descr">image for current avatar</string>
+    <string name="img_for_avatar">img for avatar</string>
+    <string name="img_avatar_1">img avatar 1</string>
+    <string name="img_avatar_4">img_avatar_4</string>
+    <string name="img_avatar_2">img_avatar_1</string>
+    <string name="img_avatar_5">img_avatar_1</string>
+    <string name="img_avatar_3">img_avatar_3</string>
+    <string name="img_avatar_6">img_avatar_1</string>
+    <string name="btn_edit">Edit</string>
+    <string name="btn_delete">Delete</string>
+    <string name="img_user_descrp">img for user avatar</string>
+    <string name="no_users_yet">No users yet</string>
+    <!-- TODO -->
+</resources>
