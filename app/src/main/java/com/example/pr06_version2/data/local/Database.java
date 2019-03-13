@@ -52,7 +52,7 @@ public class Database {
         return instance;
     }
 
-    public void updateAvatarLiveData(Avatar avatar){
+    public void updateAvatarLiveData(Avatar avatar) {
         avatarLiveData.setValue(avatar);
     }
 
@@ -65,7 +65,7 @@ public class Database {
     }
 
     public int getNextIdAvailable() {
-        return users.get(users.size() - 1).getId() + 1;
+        return (users.size() != 0 ? users.get(users.size() - 1).getId() + 1 : 1);
     }
 
     private void updateUsersLiveData() {
