@@ -38,13 +38,13 @@ public class MainActivityViewModel extends ViewModel {
 
     public MutableLiveData<Avatar> getAvatarLiveData() {
         if (avatarLiveData == null) {
-            avatarLiveData = database.getAvatarLiveData();
+            avatarLiveData = new MutableLiveData<>();
         }
         return avatarLiveData;
     }
 
     public void setAvatarToObserve(Avatar avatar) {
-        database.updateAvatarLiveData(avatar);
+        avatarLiveData.setValue(avatar);
     }
 
     public Avatar getDefaultAvatar() {

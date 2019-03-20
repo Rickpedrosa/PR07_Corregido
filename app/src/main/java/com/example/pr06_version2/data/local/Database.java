@@ -22,7 +22,6 @@ public class Database {
 
     private ArrayList<User> users;
     private MutableLiveData<List<User>> usersLiveData = new MutableLiveData<>();
-    private MutableLiveData<Avatar> avatarLiveData = new MutableLiveData<>();
 
     private Database() {
         insertAvatar(new Avatar(R.drawable.cat1, "Tom"));
@@ -50,14 +49,6 @@ public class Database {
             }
         }
         return instance;
-    }
-
-    public void updateAvatarLiveData(Avatar avatar) {
-        avatarLiveData.setValue(avatar);
-    }
-
-    public MutableLiveData<Avatar> getAvatarLiveData() {
-        return avatarLiveData;
     }
 
     public LiveData<List<User>> getUsers() {

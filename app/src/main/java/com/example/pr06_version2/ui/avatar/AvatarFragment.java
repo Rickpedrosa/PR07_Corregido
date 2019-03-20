@@ -58,7 +58,7 @@ public class AvatarFragment extends Fragment {
         super.onActivityCreated(savedInstanceState);
         setupNavigation();
         obtainArguments();
-        viewModel = ViewModelProviders.of(this, new MainActivityViewModelFactory(Database.getInstance())).get(MainActivityViewModel.class);
+        viewModel = ViewModelProviders.of(requireActivity(), new MainActivityViewModelFactory(Database.getInstance())).get(MainActivityViewModel.class);
         setupAvatars();
         viewModel.tintSavedImageV2(avatarFromUser, viewModel.queryAvatars(), Arrays.asList(imgCats));
     }

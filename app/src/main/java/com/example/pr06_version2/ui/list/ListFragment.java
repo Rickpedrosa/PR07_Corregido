@@ -45,7 +45,7 @@ public class ListFragment extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         navController = NavHostFragment.findNavController(this);
-        viewModel = ViewModelProviders.of(this, new MainActivityViewModelFactory(Database.getInstance())).get(MainActivityViewModel.class);
+        viewModel = ViewModelProviders.of(requireActivity(), new MainActivityViewModelFactory(Database.getInstance())).get(MainActivityViewModel.class);
         setupRecyclerView();
         observeUsers();
         setupViews();

@@ -1,4 +1,4 @@
-package com.example.pr06_version2.ui.profile;
+package com.example.pr06_version2.ui.detail;
 
 import android.content.ActivityNotFoundException;
 import android.graphics.Typeface;
@@ -68,7 +68,7 @@ public class DetailFragment extends Fragment {
         super.onActivityCreated(savedInstanceState);
         setupNavigation();
         obtainArguments();
-        viewModel = ViewModelProviders.of(this, new MainActivityViewModelFactory(Database.getInstance())).get(MainActivityViewModel.class);
+        viewModel = ViewModelProviders.of(requireActivity(), new MainActivityViewModelFactory(Database.getInstance())).get(MainActivityViewModel.class);
         if (viewModel.getAvatarLiveData().getValue() == null) {
             setupViews();
         }
