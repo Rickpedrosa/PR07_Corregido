@@ -238,7 +238,10 @@ public class DetailFragment extends Fragment {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                validateFields(b.layoutProfile.lblEmail, b.layoutProfile.imgEmail, b.layoutProfile.txtEmail, ValidationUtils.isValidEmail(b.layoutProfile.txtEmail.getText().toString()));
+                validateFields(b.layoutProfile.lblEmail,
+                        b.layoutProfile.imgEmail,
+                        b.layoutProfile.txtEmail,
+                        ValidationUtils.isValidEmail(b.layoutProfile.txtEmail.getText().toString()));
             }
 
             @Override
@@ -254,7 +257,10 @@ public class DetailFragment extends Fragment {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                validateFields(b.layoutProfile.lblPhonenumber, b.layoutProfile.imgPhonenumber, b.layoutProfile.txtPhonenumber, ValidationUtils.isValidPhone(b.layoutProfile.txtPhonenumber.getText().toString()));
+                validateFields(b.layoutProfile.lblPhonenumber,
+                        b.layoutProfile.imgPhonenumber,
+                        b.layoutProfile.txtPhonenumber,
+                        ValidationUtils.isValidPhone(b.layoutProfile.txtPhonenumber.getText().toString()));
             }
 
             @Override
@@ -275,7 +281,10 @@ public class DetailFragment extends Fragment {
 
             @Override
             public void afterTextChanged(Editable s) {
-                validateFields(b.layoutProfile.lblAddress, b.layoutProfile.imgAddress, b.layoutProfile.txtAddress, !b.layoutProfile.txtAddress.getText().toString().equals(""));
+                validateFields(b.layoutProfile.lblAddress,
+                        b.layoutProfile.imgAddress,
+                        b.layoutProfile.txtAddress,
+                        !b.layoutProfile.txtAddress.getText().toString().equals(""));
             }
         });
         b.layoutProfile.txtWeb.addTextChangedListener(new TextWatcher() {
@@ -286,7 +295,10 @@ public class DetailFragment extends Fragment {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                validateFields(b.layoutProfile.lblWeb, b.layoutProfile.imgWeb, b.layoutProfile.txtWeb, ValidationUtils.isValidUrl(b.layoutProfile.txtWeb.getText().toString()));
+                validateFields(b.layoutProfile.lblWeb,
+                        b.layoutProfile.imgWeb,
+                        b.layoutProfile.txtWeb,
+                        ValidationUtils.isValidUrl(b.layoutProfile.txtWeb.getText().toString()));
             }
 
             @Override
@@ -368,7 +380,9 @@ public class DetailFragment extends Fragment {
 
     @Override
     public void onDestroyView() {
-        viewModel.getAvatarLiveData().setValue(null);
         super.onDestroyView();
+        if (isRemoving()) {
+            viewModel.getAvatarLiveData().setValue(null);
+        }
     }
 }
